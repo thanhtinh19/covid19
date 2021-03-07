@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "VDBuoi7"
+rootProject.name = "COVID19"

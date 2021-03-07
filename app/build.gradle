@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.vdbuoi7"
+        applicationId "com.example.covid19"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
@@ -27,11 +27,12 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     dataBinding{
-
+        enabled = true;
     }
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
@@ -39,4 +40,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // https://mvnrepository.com/artifact/com.android.volley/volley
+    implementation group: 'com.android.volley', name: 'volley', version: '1.1.0'
 }

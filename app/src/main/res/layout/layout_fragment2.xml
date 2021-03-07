@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAC7B8">
+
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/border_search"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/icon_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_search_black_24dp">
+            </ImageView>
+
+            <EditText
+                android:padding="5dp"
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/icon_search"
+                android:textColor="@color/black">
+            </EditText>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dateUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center">
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/progessbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true">
+        </ProgressBar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listCountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/dateUpdate">
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</layout>
